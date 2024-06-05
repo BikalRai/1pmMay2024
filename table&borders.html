@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table and border</title>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+			border-style: solid;
+			border-width: 2px;
+			border-color: red;
+			padding: 10px;
+		}
+
+		/* Parent child selection*/
+
+		table th {
+			border-style: dashed;
+			border-width: 3px;
+			border-color: steelblue;
+			padding: 10px;
+		}
+
+		table td {
+			border-style: dotted;
+			border-width: 1px;
+			border-color: mediumpurple;
+			padding: 5px;
+		}
+
+/*		multiple selection*/
+		.table1, 
+		.table1 th, 
+		.table1 td {
+			border-collapse: collapse;
+			border: double green 10px;
+		}
+
+		.table2 th, .table2 td {
+			border-top: 10px groove brown;
+		}
+
+		h1 {
+			border: 1px solid;
+			border-left: 3px solid green;
+		}
+
+		img {
+			height: 100px;
+			width: 100px;
+			border: 10px outset gray;
+/*			border-radius: top right bottom left;*/
+/*			border-radius: top right&left bottom;*/
+/*			border-radius: top&bottom left&right;*/
+/*			border-radius: allsides;*/
+/*			border-radius: 20px 10px 15px 5px;*/
+/*			border-radius: 10px 25px 35px;*/
+/*			border-radius: 50px 20px;*/
+			border-radius: 10px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<!-- table format: old style -->
+	<!-- <table border="1" cellpadding="10" cellspacing="10">
+		<thead>
+			<tr>
+				<th colspan="2">Name</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>address</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>James</td>
+				<td>Bond</td>
+				<td>32</td>
+				<td>Dover</td>
+				<td>something</td>
+			</tr>
+			<tr>
+				<td rowspan="2">James</td>
+				<td>Bond</td>
+				<td>32</td>
+				<td>Dover</td>
+				<td>something</td>
+			</tr>
+			<tr>
+				<td>James</td>
+				<td>Bond</td>
+				<td>32</td>
+				<td>Dover</td>
+				<td>something</td>
+			</tr>
+		</tbody>
+	</table>
+ -->
+	<!-- table format: new way -->
+	<!-- <table>
+		<tr>
+			<th></th>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table> -->
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Address</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>John Doe</td>
+			<td>Ohio</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Mary Jenkins</td>
+			<td>Vancouver</td>
+		</tr>
+	</table>
+
+	<table class="table1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Address</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>John Doe</td>
+			<td>Ohio</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Mary Jenkins</td>
+			<td>Vancouver</td>
+		</tr>
+	</table>
+
+	<table class="table2">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Address</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>John Doe</td>
+			<td>Ohio</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Mary Jenkins</td>
+			<td>Vancouver</td>
+		</tr>
+	</table>
+
+	<h1>Header 1</h1>
+
+	<img src="C://Users/ACER/Downloads/one.webp">
+
+</body>
+</html>								
