@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+
+	<form action="#!">
+		<fieldset>
+			<legend>My Form</legend>
+			<label>Username: </label>
+		<input type="text" name="username" placeholder="Enter username" required readonly> <br>
+
+		<label>Password: </label>
+		<input type="password" name="password"> <br>
+
+		<label>Email: </label>
+		<input type="email" name="email"> <br>
+
+		<label>Pick a color: </label>
+		<input type="color" name="color"> <br>
+
+		<label>Date: </label>
+		<input type="date" name="date"> <br>
+
+		<label>Date time: </label>
+		<input type="datetime-local" name="datetime-local"> <br>
+
+		<label>Time: </label>
+		<input type="time"> <br>
+
+		<label>search: </label>
+		<input type="search"> <br>
+
+		<label>Number: </label>
+		<input type="number"> <br>
+
+		<label>Range: </label>
+		<input type="range" min="0" max="100" value="50"> <br>
+
+		<input type="checkbox" checked> Tea
+		<input type="checkbox"> Coffee
+		<input type="checkbox"> Juice
+		<br>
+
+		<input type="radio" name="gender"> Male
+		<input type="radio" name="gender"> Female
+		<input type="radio" name="gender" checked> Other
+		<br>
+
+		<input type="file">
+		<br>
+
+		<textarea rows="8" cols="20"></textarea>
+		<br>
+
+		<label>Select a country: </label>
+		<select>
+			<!-- <option>Select a country</option> -->
+			<option>Nepal</option>
+			<option selected>China</option>
+			<option>India</option>
+		</select>
+		<br>
+
+		<input type="reset">
+		<input type="submit">
+		<br>
+
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+		<button type="button">Button</button>
+		</fieldset>
+		
+	</form>
+
+</body>
+</html>
