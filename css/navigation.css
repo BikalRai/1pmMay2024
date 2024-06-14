@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* horizontal navigation bar css */
+.horizontal {
+  background-color: rgb(0, 0, 0);
+  position: sticky;
+  top: 0;
+}
+
+.horizontal ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.horizontal ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  display: block;
+}
+
+.horizontal ul li a::after {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  width: 0;
+  transition: 0.4s;
+}
+
+.horizontal ul li a:hover::after {
+  width: 100%;
+}
+
+.horizontal ul li a:active,
+.horizontal ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.horizontal ul li ul {
+  background-color: black;
+  position: absolute;
+  top: 100%;
+  width: max-content;
+
+  display: none;
+}
+
+.horizontal ul li:hover ul {
+  display: block;
+}
+
+.horizontal ul li ul li {
+  display: block;
+}
+
+/* vertical navigation bar css */
+
+.vertical {
+  background-color: rgb(0, 255, 208);
+  min-height: 100vh;
+  width: fit-content;
+}
+
+.vertical ul li {
+  position: relative;
+}
+
+.vertical ul li a {
+  display: block;
+  padding: 2rem;
+  color: rgba(54, 66, 69, 0.7);
+}
+
+.vertical ul li a.active,
+.vertical ul li a:hover {
+  font-weight: bold;
+  color: rgb(54, 66, 69);
+}
+
+.vertical ul li ul {
+  background-color: rgb(0, 255, 208);
+  position: absolute;
+  width: max-content;
+  left: 100%;
+  top: 0;
+  display: none;
+}
+
+.vertical ul li:hover ul {
+  display: initial;
+}
+
+main {
+  height: 1000px;
+}
