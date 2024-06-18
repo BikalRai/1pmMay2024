@@ -1,0 +1,55 @@
+div {
+  height: auto;
+  width: fit-content;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.box1 {
+  transition-property: background-color, font-size;
+  transition-duration: 1s;
+}
+
+.box1:hover {
+  background-color: red;
+  font-size: 1.5rem;
+}
+
+.box2 {
+  transition-property: background-color, color;
+  transition-delay: 5s;
+}
+
+.box2:hover {
+  background-color: green;
+  color: orangered;
+}
+
+.box3 {
+  transition-property: background-color;
+  transition-timing-function: linear;
+  transition-duration: 5s;
+}
+
+.box3:hover {
+  background-color: hotpink;
+}
+
+.box4 {
+  transition: 2s background-color 3s ease-in-out;
+}
+
+.box4:hover {
+  background-color: green;
+}
+
+.box5 {
+  transition: 1s linear;
+}
+
+.box5:hover {
+  background-color: green;
+  color: orangered;
+}
