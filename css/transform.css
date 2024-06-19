@@ -1,0 +1,78 @@
+div {
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+  background-color: greenyellow;
+  cursor: pointer;
+  transition: 1s;
+}
+/* css transfrom 2D */
+.box1:hover {
+  transform: rotate(-360deg);
+}
+
+.box2:hover {
+  transform: scale(1.2);
+}
+
+.box3:hover {
+  /* transform: translate(100px); */
+  transform: translate(-100px, 100px);
+}
+
+.box4:hover {
+  /* transform: skew(-60deg); */
+  /* transform: skew(30deg, -60deg); */
+  /* transform: skewX(30deg); */
+  transform: skewY(30deg);
+}
+
+/* css transform 3D */
+.box5:hover {
+  transform: perspective(100px) rotateX(30deg);
+}
+
+.box6:hover {
+  transform: rotateY(-360deg);
+}
+
+.box7:hover {
+  transform: rotateZ(-360deg);
+}
+
+.box8:hover {
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+
+.box9:hover {
+  transform: translateX(200px);
+}
+
+.box10:hover {
+  transform: translateY(200px);
+}
+
+.box11:hover {
+  transform: perspective(100px) translateZ(50px);
+}
+
+.box12:hover {
+  transform: perspective(800px) translate3d(50px, -100px, -400px);
+}
+
+.box13:hover {
+  transform: scaleX(1.5);
+}
+
+.box14:hover {
+  transform: scaleY(1.5);
+}
+
+.box15:hover {
+  transform: perspective(100px) scaleZ(2) rotateX(40deg);
+}
+
+.box16:hover {
+  transform: perspective(300px) translate(100px, 100px) rotateX(75deg)
+    scale3d(1.1, 1.5, 0.5);
+}
