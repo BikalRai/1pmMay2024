@@ -1,0 +1,38 @@
+img {
+  width: 400px;
+}
+
+.parent {
+  border: 5px solid red;
+  display: flex;
+}
+
+.child {
+  background-color: blue;
+  border: 2px solid white;
+  color: white;
+  padding: 25px;
+  /* width: 200px; */
+  flex-grow: 1;
+}
+
+@media (max-width: 800px) {
+  img {
+    height: 400px;
+    border-radius: 50px;
+  }
+
+  .parent {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    transform: perspective(200px) rotateY(60deg);
+  }
+
+  .parent {
+    flex-direction: column-reverse;
+  }
+}
