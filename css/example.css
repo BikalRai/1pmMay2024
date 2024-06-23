@@ -1,0 +1,160 @@
+:root {
+  --font-color: orange;
+  --bg-color: #555;
+  --container-width: calc(100% - 20%);
+}
+
+@keyframes move-down {
+  0% {
+    top: -300px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes move-in {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger .line {
+  height: 5px;
+  background-color: black;
+}
+
+header {
+  color: #ccc;
+}
+
+header nav {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .logo {
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--font-color);
+}
+
+header nav ul {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+header .banner {
+  height: 70vh;
+  background-image: url('https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+header .banner .overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+header .banner .overlay h2 {
+  position: relative;
+  animation: move-down 2s forwards;
+}
+
+header .banner .overlay h1 {
+  position: relative;
+  left: -1000px;
+  animation: move-in 2s 2s forwards;
+}
+
+header .banner .overlay p {
+  transform: scale(0);
+  animation: scale 2s 2s forwards;
+}
+
+header .banner button {
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+header .banner button:hover {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 500px) {
+  header .banner {
+    height: auto;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2px;
+    padding: 0.25rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  header nav ul {
+    display: none;
+  }
+}
