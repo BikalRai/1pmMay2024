@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operators</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		var a = 2;
+		a = a + 1;
+		console.log("Value of a: " + a);
+
+		a += 1;
+		console.log("Value of a: " + a);
+
+		a += 111;
+		console.log("Value of a: " + a);
+
+
+		a /= 3;
+		console.log("Value of a: " + a);
+
+		var b = 5;
+		// b %= 5;
+		b = b % 5;
+		console.log("Value of b: " + b);
+
+		console.log(b++);
+		console.log(b);
+		console.log(b--);
+		console.log(b);
+		console.log(--b);
+		console.log(++b);
+
+		// comparision operators
+
+		console.log(5 > 4); // true
+		console.log(5 < 4); // false
+
+		console.log(5 >= 5); // true
+
+		console.log(5 == 5);
+		console.log(10 == "10");
+		console.log(10 === "10");
+
+		// boolean logic operators
+		console.log("Output: " + (true && true));
+		console.log("Output: " + (true && false));
+		console.log("Output: " + (false && false));
+		console.log("Output: " + (true || false));
+
+		console.log((5 > 4) && (3 === "3"));
+
+		console.log(!true);
+
+		console.log(!((5 > 4) && (3 === "3")));
+
+		// data types:
+		// number
+		// string
+		// boolean
+		// null
+		// undefined
+		// bigInt
+
+		// String template literal
+		console.log("Double quotes: ", "Hello World!");
+		console.log("Single quotes: ",'Hello World!!');
+		console.log(`Template Literal: Hello World!!!`);
+
+		console.log("Double quotes: ", "Hello\n World!");
+		console.log("Single quotes: ",'Hello\n World!!');
+		console.log(`Template Literal:
+		Hello World!!!`);
+
+		var x = 6;
+		var y = 5;
+
+		console.log("The sum is: " + (x + y));
+		console.log(`The sum is: ${x + y}`);
+
+		console.log(`The month is ${new Date().getMonth()}`);
+
+
+
+
+
+	</script>
+</body>
+</html>
