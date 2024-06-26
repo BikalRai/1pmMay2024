@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>First JavaScript Class</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First JavaScript Class</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write('<h1>Hello world!!</h1>');
+      document.write('I am continuing another sentence..<br>');
+      document.write('I am continuing another sentence2..');
 
+      // alert(10 + 2);
 
-	<script type="text/javascript">
-		document.write("<h1>Hello world!!</h1>");
-		document.write("I am continuing another sentence..<br>");
-		document.write("I am continuing another sentence2..");
+      console.log(23 * 23);
 
-		// alert(10 + 2);
+      // declaring variable and initializing its value
+      var a = 23;
+      console.log('variable a value: ' + a);
+      console.log('Type of variable a:', typeof a);
 
-		console.log(23 * 23);
+      // reassigning value a
+      a = 'Some String';
+      console.log('variable a value: ' + a);
+      console.log('Type of variable a:', typeof a);
 
-		// declaring variable and initializing its value
-		var a = 23;
-		console.log('variable a value: ' + a);
-		console.log("Type of variable a:", typeof a);
+      // some string examples
+      console.log('23' + 23);
+      console.log('23' - 23);
 
-		// reassigning value a
-		a = "Some String";
-		console.log('variable a value: ' + a);
-		console.log("Type of variable a:", typeof a);
+      // variable name best practices is to use camelcasing
+      var myVariableName; // this is declaration
 
-		// some string examples
-		console.log("23" + 23);
-		console.log("23" - 23);
+      // initializating value to variable
+      myVariableName = true; // this boolean value and boolean values are only true and false
 
-		// variable name best practices is to use camelcasing
-		var myVariableName; // this is declaration
+      console.log(myVariableName);
+      console.log(typeof myVariableName);
 
-		// initializating value to variable
-		myVariableName = true // this boolean value and boolean values are only true and false
+      console.log(a + ', added this extra text');
 
-		console.log(myVariableName);
-		console.log(typeof myVariableName);
+      var c = 22;
+      var d = 33;
+      var sum = c + d;
+      console.log('Sum: ' + sum);
 
-		
-		console.log(a + ", added this extra text");
+      var mul = c * d;
+      console.log('Multiplication of c and d: ' + mul);
 
-		var c = 22;
-		var d = 33;
-		var sum = c + d;
-		console.log("Sum: " + sum);
-
-		var mul = c * d;
-		console.log("Multiplication of c and d: " + mul);
-
-		var div = c / d;
-		console.log("Division of" + " c and d: " + div);
-
-		
-	</script>
-</body>
+      var div = c / d;
+      console.log('Division of' + ' c and d: ' + div);
+    </script>
+  </body>
 </html>

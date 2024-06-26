@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Variable keywords and Conditional</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+
+		// var keyword
+		console.log(a);
+
+		var a = "This is a";
+
+
+		// this is block
+		{
+			var b = "Inside a block";
+			console.log(a);
+		}
+
+		console.log(b);
+
+		// let keyword
+
+		// console.log(d);
+		let d = "This is d";
+		console.log(d);
+
+		// another block
+		{
+			let e = "This is e inside a block";
+			console.log("Reading d from inside a block", d)
+		}
+
+		// console.log(e);
+
+		let f;
+
+		console.log(f);
+
+		let g = 3;
+		g += 4;
+		console.log(g);
+
+		// const keyword
+
+		// console.log(s);
+		const s = 5;
+		console.log(s);
+
+		{
+			const t = "Something in T block";
+		}
+
+		// console.log(t);
+
+		const x = "Initialized";
+
+		// x += ", Added text";
+
+		// conditional statement
+		const myText = "Text";
+
+		if (myText === "Text") {
+			console.log("Yay!!!");
+		}
+
+		console.log("After my if statment");
+
+		if (myText === "TeXt") {
+			console.log("Yay!!")
+		} else {
+			console.log("Are you kidding me?")
+		}
+
+		const newVariable = 5;
+
+		if (newVariable <= 4) {
+			console.log(newVariable);
+		} else if (newVariable >= 5) {
+			console.log(newVariable);
+		} 
+
+		const myValue = prompt("Enter a number: "); // prompt asks input from user
+
+
+		if(Number(myValue) % 2 === 0) {
+			console.log("Even number");
+		} else {
+
+			console.log("Odd Number");
+		}
+
+
+		// BMI calculator
+		const weight = prompt("Enter weight in kg");
+		const height = prompt("Enter height in meters");
+
+		const bmi = weight / (height * height);
+
+		if (bmi < 17.9) {
+			console.log("Under weight");
+		} else if(bmi >= 17.9 && bmi < 24) {
+			console.log("Healthy");
+		} else if(bmi >= 24 && bmi < 29) {
+			console("Overweight");
+		} else if (bmi >= 29) {
+			console.log("Obese");
+		}
+
+
+	</script>
+</body>
+</html>
