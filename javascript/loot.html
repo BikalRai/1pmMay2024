@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loop</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		let i = 1;
+
+		// for loop
+		for (let i = 0; i < 10; i++) {
+			console.log(i);
+		}
+
+		for (i; i <= 100; i++) {
+			console.log(i);
+		}
+
+		let sum = 0;
+
+		for(let i = 1; i < 11; i++) {
+			sum+= i;
+		}
+
+		console.log(sum);
+
+		for (let myNum = 1; myNum <= 50; myNum++) {
+			if(myNum % 2 === 0) {
+				console.log(myNum, " is even");
+			} else {
+				console.log(myNum, " is odd");
+			}
+		}
+
+
+		// while loop
+		while(i != 90) {
+			console.log(i);
+			i--;
+		}
+
+
+		let mySum = 0;
+		let j = 10;
+		while(j > 0) {
+			mySum += j;
+			j--;
+		}
+
+		console.log("My sum:", mySum);
+
+		// palindrome number
+		let userInput = prompt("Enter a number");
+		const originalNum = Number(userInput);
+		let reverse = 0;
+		let remainder = 0;
+
+		while (userInput > 0) {
+			remainder = userInput % 10;
+			reverse = (reverse * 10) + remainder;
+			userInput = Math.floor(userInput / 10);
+		}
+
+		if (reverse === originalNum) {
+			console.log(reverse, " is Palindrome");
+		} else {
+			console.log(reverse, " is not Palindrome");
+		}
+
+		let x = 5;
+
+		while(x < 5) {
+			console.log("I am trying to print x");
+			x++;
+		}
+		
+
+		// do while loop
+		let q = 1;
+
+		do {
+			console.log("I am printing...");
+			q++;
+		} while (q < 5);
+
+
+
+
+	</script>
+
+</body>
+</html>
