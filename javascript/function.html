@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Functions</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+			
+		// normal function declaration
+
+		function sayHello() {
+			console.log("Hello world!!");
+		}
+
+		sayHello(); // calling/invoking/executing a function
+
+
+		function add() {
+			const a = 3;
+			const b = 5;
+			const c = a + b;
+			console.log(c);
+		}
+
+		add();
+
+		// creating a dice using Math.random() and Math.floor();
+		// Math.random() generates number between 0.00000000000001 and 0.9999999999999999;
+
+		
+		function diceRoll() {
+			const randomNum = Math.floor(Math.random() * 6) + 1;
+
+			// const randomNum = Math.ceil(Math.random() * 6); // alternative approach
+
+			console.log(randomNum);
+		}
+
+		// diceRoll();
+		// diceRoll();
+		// diceRoll();
+		// diceRoll();
+		// diceRoll();
+
+		for(let i = 1; i < 10; i++) {
+			diceRoll();
+		}
+
+		// parameterized function
+		function sub(x , y) {
+			const sum = x - y;
+			console.log("value of x:", x);
+			console.log("value of y:", y);
+			console.log(sum);
+		}
+
+		sub(3, 4);
+		sub(12, 4);
+		sub(3, 14);
+
+		const num1 = prompt("Enter number 1");
+		const num2 = prompt("Enter number 2");
+
+		console.log("Value:")
+		sub(num1, num2);
+
+		// function with return statement
+		function mul() {
+
+			// const a = 3;
+			// const b = 4;
+			// return a * b;
+			// console.log("After return statement")
+			return 3 * 3;
+		}
+
+		const val = mul();
+		console.log("Val: ", val);
+
+		// function with return statement and parameter
+		function div(x, y) {
+			return x / y;
+		}
+
+		const val2 = div(10, 3);
+		console.log("Val2: ", val2);
+
+		// other examples of return statement
+		// function expression
+		const myFunc = function() {
+			return 4 + 3;
+		}
+
+		console.log(7 + myFunc());
+
+		console.log("Hello this is value from add()", add());
+
+		console.log(`Hello this is from mul(): ${mul()}`)
+
+		// arrow function
+		const foo = () => {
+			console.log("My foo function");
+			return "This is return statement from foo function"
+		}
+
+		const myFoo = foo();
+		console.log(myFoo);
+
+		const func = () => 2 - 2;
+		console.log(func());
+
+		const func2 = (d, e) => d - e;
+		console.log(func2(10, 3));
+
+		console.log(a);// undefined
+		var a = 5;
+
+		function someFunc() {
+			var b = 6;
+		}
+
+		console.log(b);
+
+
+
+	</script>
+
+
+</body>
+</html>
