@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays and strings</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		const myFirstArray = [];	
+		console.log(myFirstArray);
+		console.log(typeof myFirstArray);
+
+		const myArray = [1, 3, "Some String", [1, 2, 3,]]
+		console.log(myArray);
+
+		console.log(myArray[0]);
+		console.log(myArray[1]);
+		console.log(myArray[2]);
+		console.log(myArray[3]);
+
+		console.log(myArray[3][1]);
+
+		myArray.push(true);
+		console.log("Pushed array: ", myArray);
+		myArray.pop();
+
+		const myPoppedValue = myArray.pop();	
+
+		console.log("Popped array: ", myArray);
+		console.log("Popped value: ", myPoppedValue);
+
+		myArray.unshift("Added Value to the front");
+		console.log(myArray);
+
+		myArray.shift();
+		myArray.shift();
+		console.log(myArray);
+
+		console.log(myArray.length);
+		const myArrayLegth = myArray.length;
+
+		const arr = [1, 2, 3, 4, 5];
+		
+		console.log(arr.slice(0));
+		
+		console.log(arr.slice(2));
+
+		console.log(arr.slice(0, 3));
+
+		console.log(arr.slice(arr.length - 1));
+
+		const myNums = [3, 5, 1, 11, 25, 22];
+
+		for (let i = 0; i < 6; i++) {
+			console.log(myNums[i]);
+		}
+
+		for (let i = 0; i < myNums.length; i++) {
+			console.log(myNums[i]);
+		}
+
+		myNums.forEach(function(element, index) {
+			console.log("Element: ", element);
+			console.log("index: ", index);
+		});
+
+		const myHobbies = ["Football", "Anime", "Tiktok", "Chess", "Cricket"];
+
+		myHobbies.forEach(function(element) {
+			console.log(element);
+		});
+
+		// String
+
+		const myText = "The cow jumped over the moon";
+		console.log(myText[4]);
+		console.log(myText.length);
+
+		console.log(myText.toLowerCase());
+		console.log(myText);
+
+		const lowerCasedText = myText.toLowerCase();
+		console.log(lowerCasedText);
+
+		const upperCasedText = myText.toUpperCase();
+		console.log(upperCasedText);
+
+		let splitedTextArr = myText.split();
+		console.log(splitedTextArr);
+
+		splitedTextArr = myText.split(" ");
+		console.log(splitedTextArr);
+
+		let joinedText = splitedTextArr.join("->");
+		console.log(joinedText);
+
+		const firstName = prompt("Enter frist name");
+		const firstLetter = firstName[0].toUpperCase();
+		const restOfName = firstName.slice(1).toLowerCase();
+		console.log(firstLetter + restOfName);
+
+
+
+	</script>
+
+</body>
+</html>
