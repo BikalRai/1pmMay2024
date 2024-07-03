@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Docment Object Model (DOM)</title>
+</head>
+<body id="body">
+
+	<h1 id="header1">hello world
+		<p>lorem</p>
+	</h1>
+
+	<p class="para">She sells seashells by the seashore</p>
+	<p class="para">The quick brown fox ran after the dog</p>
+	<p class="para">This is the last para</p>
+
+
+
+	<script type="text/javascript">
+		// break and continue statement
+
+		for (let i = 1; i <= 10; i++) {
+			
+			if (i === 5) {
+				break;
+			}
+			console.log(i);
+		}
+
+		for (let i = 1; i <= 10; i++) {
+			
+			if(i === 3) {
+				continue;
+			}
+			console.log(i);
+		}
+
+		// DOM
+		const myBody = document.getElementById("body");
+		console.log(myBody);
+
+		const myHeader1 = document.getElementById("header1");
+		console.log(myHeader1);
+
+		// getElementsByTagName return HTMLCollection but the collection is not an array, but we can loop over it
+		const myParas = document.getElementsByTagName("p");
+		console.log(myParas);
+		console.log(myParas[2]);
+
+		for(let i = 0; i < myParas.length; i++) {
+			console.log(myParas[i])
+		}
+
+		const myClassParas = document.getElementsByClassName("para");
+		console.log(myClassParas);
+
+		const selectionUsingQuerySelector = document.querySelector("#header1");
+		console.log(selectionUsingQuerySelector)
+
+		const selection2 = document.querySelector(".para");
+		console.log(selection2);
+
+		// returns nodelist
+		const querySelectorAll = document.querySelectorAll(".para");
+		console.log(querySelectorAll);
+
+
+		// we can apply array method to nodelist
+		querySelectorAll.forEach(el => console.log(el));
+
+		myBody.style.backgroundColor = "red";
+		myBody.style.color = "white";
+
+		// accessing the text inside element
+		console.log(myHeader1.innerText);
+		console.log(myParas[2].innerHTML);
+		console.log(myParas[1].textContent);
+
+
+		// setting text
+		myParas[1].innerText = "Using Inner Text Method";
+		myParas[2].innerHTML = "Using inner HTML method";
+		myParas[3].textContent = "Adding some content";
+
+		myParas[2].innerHTML = "<code><i>italic</i></code>";
+		myParas[1].innerText = "<h1>Using Inner Text Method</h1>";
+
+		myClassParas[0].style.fontSize = "2rem";
+		myClassParas[0].style.textShadow = "3px 3px 4px";
+
+		console.log(document.title)
+		document.title = "This is the edited TITLE"
+		
+
+	</script>
+
+</body>
+</html>
