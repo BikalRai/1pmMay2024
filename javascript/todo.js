@@ -26,6 +26,21 @@ function createTodoElement (myTodo) {
 	todoItem.setAttribute("readonly", "readonly")
 	todoItem.value=`${myTodo}`;
 
+	editBtn.addEventListener("click", function() {
+		// console.log(editBtn.previousSibling);
+		const todoEl = editBtn.previousSibling;
+		todoEl.toggleAttribute("readonly");
+		if (todoEl.hasAttribute("readonly")) {
+			editBtn.innerText = "Edit";
+		} else {
+			editBtn.innerText = "Update";
+		}
+	});
+
+	delBtn.addEventListener("click", function () {
+		delBtn.parentElement.remove();
+	});
+
 	todo.appendChild(todoItem);
 	todo.appendChild(editBtn);
 	todo.appendChild(delBtn);

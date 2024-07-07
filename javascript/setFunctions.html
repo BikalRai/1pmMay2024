@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Set Functions</title>
+	<style type="text/css">
+		.style {
+			border: none;
+			outline: none;
+			border-bottom: 5px solid red;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="text" id="clock">
+
+
+
+	<script type="text/javascript">
+
+
+		// executes the function after certain time: example: 3000 => 3sec
+		/*
+		setTimeout(function(){
+	
+		}, seconds);
+
+		*/
+
+		setTimeout(function() {
+			document.getElementById("clock").classList.add("style");
+		}, 3000)
+
+		// setInterval: executes the function every determined seconds
+		/*
+		setInterval(function(){}, seconds)
+		*/
+
+		// date function provided by js
+		const now = new Date();
+		const month = now.getMonth();
+		const day = now.getDate();
+		const year = now.getFullYear();
+		const time = now.getTime();
+		const hours = now.getHours();
+		const mins = now.getMinutes();
+		const secs = now.getSeconds();
+
+		console.log(now);
+		console.log(month);
+		console.log(day);
+		console.log(year);
+		console.log(time);
+		console.log(hours);
+		console.log(mins);
+		console.log(secs);
+
+		document.getElementById("clock").value = `${hours} : ${mins} : ${secs}`
+
+		function clock() {
+			const now = new Date();
+			const hours = now.getHours();
+			const minutes = now.getMinutes();
+			const seconds = now.getSeconds();
+
+			let clock = document.getElementById("clock");
+			clock.value = `${hours} : ${minutes} : ${seconds}`
+		}
+
+		setInterval(function() {
+			clock();
+		}, 1000)
+
+
+	</script>
+</body>
+</html>
